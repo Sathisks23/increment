@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="output">0</h1>
+    <button onclick="add(),color()">+</button>  <button onclick="sub(),color()">-</button>
+    <button onclick="reset(),color()">Reset</button>
+
+    <script>
+
+        let output = document.getElementById('output')
+        let ans = 0
+        
+        
+        function add(){
+            ans += 1
+             output.innerHTML = ans
+        }
+        function sub(){
+            ans -= 1
+            output.innerHTML = ans
+        }
+        function reset(){
+            
+            output.innerHTML =0
+        }
+
+        function color(){
+          if  (output.innerHTML<0){
+            output.style.color ='red'
+            console.log(output.innerHTML<0)
+        }else if(output.innerHTML>0){
+            output.style.color ='green'
+        }else{
+            output.style.color ='black'
+        }
+    }
+    </script>
+</body>
+</html>
